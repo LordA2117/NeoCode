@@ -52,6 +52,7 @@ local plugins = {
     event = "InsertEnter",
     opts = {} -- this is equalent to setup({}) function
 	},
+	{"folke/trouble.nvim", dependencies = { "nvim-tree/nvim-web-devicons" }, opts = {}, ft = {"python", "c", "cpp", "javascript"}},
 }
 
 	
