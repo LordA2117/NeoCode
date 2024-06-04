@@ -24,7 +24,9 @@ local plugins = {
 	{'L3MON4D3/LuaSnip'},
 	{'saadparwaiz1/cmp_luasnip'},
 	{'onsails/lspkind.nvim'},
+	{'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' }},
 	{'windwp/nvim-autopairs', event='InsertEnter', config=true},
+	{'nvim-treesitter/nvim-treesitter', build=":TSUpdate"},
 
 }
 require("lazy").setup(plugins, opts)
