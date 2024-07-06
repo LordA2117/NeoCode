@@ -29,5 +29,12 @@ local plugins = {
 	{'nvim-treesitter/nvim-treesitter', build=":TSUpdate"},
 	{'nvim-tree/nvim-tree.lua', dependencies={'nvim-tree/nvim-web-devicons'}},
 	{'akinsho/bufferline.nvim', version = "*", dependencies = {'nvim-tree/nvim-web-devicons'}},
+	-- colorschemes
+	{ "AstroNvim/astrotheme", name="astrotheme" },
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	{ "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ..., name="gruvbox"},
+	{"loctvl842/monokai-pro.nvim", name = "monokai"},
+	-- colorscheme switcher
+	{'zaldih/themery.nvim'},
 }
 require("lazy").setup(plugins, opts)
