@@ -36,5 +36,22 @@ local plugins = {
 	{"loctvl842/monokai-pro.nvim", name = "monokai"},
 	-- colorscheme switcher
 	{'zaldih/themery.nvim'},
+	-- Dashboard
+  {
+		'nvimdev/dashboard-nvim',
+		event = 'VimEnter',
+		config = function()
+			require('dashboard').setup {
+				-- config
+				theme = 'hyper',
+				hide = {
+					statusline,
+					tabline,
+					winbar
+				}
+			}
+		end,
+		dependencies = { {'nvim-tree/nvim-web-devicons'}}
+	}	
 }
 require("lazy").setup(plugins, opts)
