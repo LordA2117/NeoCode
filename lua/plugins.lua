@@ -52,6 +52,8 @@ local plugins = {
 			}
 		end,
 		dependencies = { {'nvim-tree/nvim-web-devicons'}}
-	}	
+	},
+	-- Toggle Terminal
+	{'akinsho/toggleterm.nvim', version = "*", config=true}
 }
 require("lazy").setup(plugins, opts)

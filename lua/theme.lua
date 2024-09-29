@@ -1,10 +1,8 @@
 -- Themery block
 -- This block will be replaced by Themery.
-require("astrotheme").setup({
-colorscheme = "astrodark"
-})
+vim.o.background = "dark" -- or "light" for light mode
 
 
-vim.cmd("colorscheme astrotheme")
-vim.g.theme_id = 2
+vim.cmd("colorscheme gruvbox")
+vim.g.theme_id = 1
 -- end themery block
