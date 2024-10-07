@@ -54,6 +54,14 @@ local plugins = {
 		dependencies = { {'nvim-tree/nvim-web-devicons'}}
 	},
 	-- Toggle Terminal
-	{'akinsho/toggleterm.nvim', version = "*", config=true}
+	{'akinsho/toggleterm.nvim', version = "*", config=true},
+	{
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = {},
+		ft = {"python", "c", "c++", "html", "css", "javascript", "lua"},
+	}
 }
 require("lazy").setup(plugins, opts)
