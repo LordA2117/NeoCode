@@ -61,7 +61,8 @@ local plugins = {
     ---@module "ibl"
     ---@type ibl.config
     opts = {},
-		ft = {"python", "c", "c++", "html", "css", "javascript", "lua"},
-	}
+		ft = {"python", "c", "c++", "html", "css", "javascript", "lua", "java"},
+	},
+	{'maxmellon/vim-jsx-pretty', ft="javascriptreact"}
 }
 require("lazy").setup(plugins, opts)

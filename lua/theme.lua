@@ -1,8 +1,10 @@
 -- Themery block
 -- This block will be replaced by Themery.
-vim.o.background = "dark" -- or "light" for light mode
+require("catppuccin").setup({
+flavour = "mocha"
+})
 
 
-vim.cmd("colorscheme gruvbox")
-vim.g.theme_id = 1
+vim.cmd("colorscheme catppuccin")
+vim.g.theme_id = 3
 -- end themery block
