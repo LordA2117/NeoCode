@@ -39,5 +39,10 @@ require("themery").setup({
 			]]
 		},
 
+		{
+			name="One Dark Pro",
+			colorscheme = "onedark",
+		},
+
 	}
 })

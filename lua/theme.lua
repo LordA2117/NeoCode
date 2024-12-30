@@ -1,10 +1,5 @@
 -- Themery block
 -- This block will be replaced by Themery.
-require("catppuccin").setup({
-flavour = "mocha"
-})
-
-
-vim.cmd("colorscheme catppuccin")
-vim.g.theme_id = 3
+vim.cmd("colorscheme onedark")
+vim.g.theme_id = 5
 -- end themery block

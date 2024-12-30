@@ -33,6 +33,7 @@ local plugins = {
 	{ "AstroNvim/astrotheme", name="astrotheme" },
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	{ "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ..., name="gruvbox"},
+	{"olimorris/onedarkpro.nvim", priority=1000},
 	{"loctvl842/monokai-pro.nvim", name = "monokai"},
 	-- colorscheme switcher
 	{'zaldih/themery.nvim'},
