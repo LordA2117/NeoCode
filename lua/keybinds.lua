@@ -10,3 +10,6 @@ vim.keymap.set('n', '<leader>bp', ':bprevious<cr>', opts)
 
 -- Terminal
 vim.keymap.set('n', '<leader>tm', ':ToggleTerm<cr>', opts)
+
+-- Copy to clipboard neovim
+vim.keymap.set("v", "<leader>cc", '"+y', opts)
