@@ -69,7 +69,7 @@ local plugins = {
     ---@module "ibl"
     ---@type ibl.config
     opts = {},
-		ft = {"python", "c", "c++", "html", "css", "javascript", "lua", "java"},
+		ft = {"python", "c", "c++", "html", "css", "javascript", "lua", "java", "javascriptreact"},
 	},
 	{'maxmellon/vim-jsx-pretty', ft="javascriptreact"}
 }
