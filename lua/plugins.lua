@@ -29,6 +29,8 @@ local plugins = {
 	{'nvim-treesitter/nvim-treesitter', build=":TSUpdate"},
 	{'nvim-tree/nvim-tree.lua', dependencies={'nvim-tree/nvim-web-devicons'}},
 	{'akinsho/bufferline.nvim', version = "*", dependencies = {'nvim-tree/nvim-web-devicons'}},
+	-- Telescope and plenary.nvim
+	{ 'nvim-telescope/telescope.nvim', tag = '0.1.8', dependencies = { 'nvim-lua/plenary.nvim' }},
 	-- colorschemes
 	{ "AstroNvim/astrotheme", name="astrotheme" },
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
@@ -49,7 +51,12 @@ local plugins = {
 					statusline,
 					tabline,
 					winbar
-				}
+				},
+				config={
+					week_header = {
+						enable = true,
+					},
+				},
 			}
 		end,
 		dependencies = { {'nvim-tree/nvim-web-devicons'}}
