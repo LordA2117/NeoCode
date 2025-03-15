@@ -71,6 +71,8 @@ local plugins = {
     opts = {},
 		ft = {"python", "c", "c++", "html", "css", "javascript", "lua", "java", "javascriptreact"},
 	},
+	-- Toggle comments easily with comment.nvim
+	{'numToStr/Comment.nvim', opts={}},
 	{'maxmellon/vim-jsx-pretty', ft="javascriptreact"}
 }
 require("lazy").setup(plugins, opts)
