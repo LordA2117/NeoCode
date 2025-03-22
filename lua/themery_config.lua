@@ -1,6 +1,6 @@
 -- Minimal config
 require("themery").setup({
-  themeConfigFile = "C:/Users/abhin/AppData/Local/nvim/lua/theme.lua", -- Described below
+--  themeConfigFile = "C:/Users/abhin/AppData/Local/nvim/lua/theme.lua", -- Described below
   livePreview = true, -- Apply theme while browsing. Default to true.
 	themes = {
 		{
