@@ -115,6 +115,13 @@ local plugins = {
 							action = 'lua vim.cmd(":NvimTreeToggle")'
 						},
 						{
+							icon = '  ',
+							icon_hl = 'Title',
+							desc = 'Themes',
+							key = 't',
+							action = 'lua vim.cmd(":Themery")'
+						},
+						{
 							icon = '󰈆  ',
 							icon_hl = 'Title',
 							desc = 'Quit',
