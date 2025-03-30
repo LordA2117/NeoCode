@@ -46,7 +46,7 @@ local plugins = {
 		config = function()
 			require('dashboard').setup {
 				-- config
-				theme = 'hyper',
+				theme = 'doom',
 				hide = {
 					statusline,
 					tabline,
@@ -55,6 +55,75 @@ local plugins = {
 				config={
 					week_header = {
 						enable = true,
+					},
+					center = {
+						{
+							icon = '  ',
+							icon_hl = 'Title',
+							desc = 'Find File                                 ',
+							-- desc_hl = 'Title',
+							key = 'f',
+							-- keymap = 'SPC f f',
+							key_hl = 'Number',
+							-- key_format = ' %s', -- remove default surrounding `[]`
+							action = "lua require('telescope.builtin').find_files()"
+						},
+						{
+							icon = '  ',
+							icon_hl = 'Title',
+							desc = 'Live Grep',
+							key = 'g',
+							-- keymap = 'SPC f g',
+							-- key_format = ' %s', -- remove default surrounding `[]`
+							action = "lua require('telescope.builtin').live_grep()"
+						},
+						{
+							icon = '  ',
+							icon_hl = 'Title',
+							desc = 'Explore Buffers',
+							key = 'b',
+							-- keymap = ''
+							action = "lua require('telescope.builtin').buffers()"
+						},
+						{
+							icon = '󰋖  ',
+							icon_hl = 'Title',
+							desc = 'Help Tags',
+							key = 'h',
+							-- keymap = ''
+							action = "lua require('telescope.builtin').help_tags()"
+						},
+						{
+							icon = '  ',
+							icon_hl = 'Title',
+							desc = 'Lazy Home',
+							key = 'l',
+							action = 'lua require("lazy").home()'
+						}, 
+						{
+							icon = '  ',
+							icon_hl = 'Title',
+							desc = 'Sync Plugins',
+							key = 's',
+							action = 'lua require("lazy").sync()'
+						},
+						{
+							icon = '  ',
+							icon_hl = 'Title',
+							desc = 'File Tree',
+							key = 'e',
+							action = 'lua vim.cmd(":NvimTreeToggle")'
+						},
+						{
+							icon = '󰈆  ',
+							icon_hl = 'Title',
+							desc = 'Quit',
+							key = 'q',
+							action = 'lua vim.cmd(":q")'
+						},
+					},
+					footer = {
+						"⚡Made with 💖 by Bobby Smiles 🙂"
 					},
 				},
 			}
