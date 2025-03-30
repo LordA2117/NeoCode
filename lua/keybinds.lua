@@ -13,3 +13,6 @@ vim.keymap.set('n', '<leader>tm', ':ToggleTerm<cr>', opts)
 
 -- Copy to clipboard neovim
 vim.keymap.set("v", "<leader>cc", '"+y', opts)
+
+-- Inc-rename keybinds
+vim.keymap.set("n", "<leader>rn", ":IncRename ")

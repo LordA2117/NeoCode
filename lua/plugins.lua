@@ -142,6 +142,27 @@ local plugins = {
 	},
 	-- Toggle comments easily with comment.nvim
 	{'numToStr/Comment.nvim', opts={}},
-	{'maxmellon/vim-jsx-pretty', ft="javascriptreact"}
+	{'maxmellon/vim-jsx-pretty', ft="javascriptreact"},
+	{
+  "folke/noice.nvim",
+  event = "VeryLazy",
+  opts = {
+    -- add any options here
+  },
+  dependencies = {
+    -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+    "MunifTanjim/nui.nvim",
+    -- OPTIONAL:
+    --   `nvim-notify` is only needed, if you want to use the notification view.
+    --   If not available, we use `mini` as the fallback
+    "rcarriga/nvim-notify",
+    }
+	},
+	{
+  "smjonas/inc-rename.nvim",
+  config = function()
+    require("inc_rename").setup()
+  end,
+	}
 }
 require("lazy").setup(plugins, opts)
