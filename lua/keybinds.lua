@@ -16,3 +16,6 @@ vim.keymap.set("v", "<leader>cc", '"+y', opts)
 
 -- Inc-rename keybinds
 vim.keymap.set("n", "<leader>rn", ":IncRename ")
+
+-- Render Markdown
+vim.keymap.set("n", "<leader>mv", ":RenderMarkdown toggle <cr>")
