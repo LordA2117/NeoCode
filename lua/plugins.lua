@@ -1,187 +1,201 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
 end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
 
-	{"williamboman/mason.nvim"},
-	{"williamboman/mason-lspconfig.nvim"},
-	{"neovim/nvim-lspconfig"},
-	{'hrsh7th/cmp-nvim-lsp',},
-	{'hrsh7th/cmp-cmdline'},
-	{'hrsh7th/nvim-cmp',},
-	{'hrsh7th/cmp-path',},
-	{'hrsh7th/cmp-buffer', },
-	{'L3MON4D3/LuaSnip'},
-	{'saadparwaiz1/cmp_luasnip'},
-	{'onsails/lspkind.nvim'},
-	{'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' }},
-	{'windwp/nvim-autopairs', event='InsertEnter', config=true},
-	{'nvim-treesitter/nvim-treesitter', build=":TSUpdate"},
-	{'nvim-tree/nvim-tree.lua', dependencies={'nvim-tree/nvim-web-devicons'}},
-	{'akinsho/bufferline.nvim', version = "*", dependencies = {'nvim-tree/nvim-web-devicons'}},
+	{ "williamboman/mason.nvim" },
+	{ "williamboman/mason-lspconfig.nvim" },
+	{ "neovim/nvim-lspconfig" },
+	{ "hrsh7th/cmp-nvim-lsp" },
+	{ "hrsh7th/cmp-cmdline" },
+	{ "hrsh7th/nvim-cmp" },
+	{ "hrsh7th/cmp-path" },
+	{ "hrsh7th/cmp-buffer" },
+	{ "L3MON4D3/LuaSnip" },
+	{ "saadparwaiz1/cmp_luasnip" },
+	{ "onsails/lspkind.nvim" },
+	{ "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
+	{ "windwp/nvim-autopairs", event = "InsertEnter", config = true },
+	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+	{ "nvim-tree/nvim-tree.lua", dependencies = { "nvim-tree/nvim-web-devicons" } },
+	{ "akinsho/bufferline.nvim", version = "*", dependencies = { "nvim-tree/nvim-web-devicons" } },
 	-- Formatters
-	{'stevearc/conform.nvim', opts={}},
+	{ "stevearc/conform.nvim", opts = {} },
 	-- Telescope and plenary.nvim
-	{ 'nvim-telescope/telescope.nvim', tag = '0.1.8', dependencies = { 'nvim-lua/plenary.nvim' }},
+	{ "nvim-telescope/telescope.nvim", tag = "0.1.8", dependencies = { "nvim-lua/plenary.nvim" } },
 	-- colorschemes
-	{ "AstroNvim/astrotheme", name="astrotheme" },
+	{ "AstroNvim/astrotheme", name = "astrotheme" },
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	{ "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ..., name="gruvbox"},
-	{"olimorris/onedarkpro.nvim", priority=1000},
-	{"loctvl842/monokai-pro.nvim", name = "monokai"},
+	{ "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ..., name = "gruvbox" },
+	{ "olimorris/onedarkpro.nvim", priority = 1000 },
+	{ "loctvl842/monokai-pro.nvim", name = "monokai" },
 	-- colorscheme switcher
-	{'zaldih/themery.nvim'},
+	{ "zaldih/themery.nvim" },
 	-- Dashboard
-  {
-		'nvimdev/dashboard-nvim',
-		event = 'VimEnter',
+	{
+		"nvimdev/dashboard-nvim",
+		event = "VimEnter",
 		config = function()
-			require('dashboard').setup {
+			require("dashboard").setup({
 				-- config
-				theme = 'doom',
+				theme = "doom",
 				hide = {
 					statusline,
 					tabline,
-					winbar
+					winbar,
 				},
-				config={
+				config = {
 					week_header = {
 						enable = true,
 					},
 					center = {
 						{
-							icon = '  ',
-							icon_hl = 'Title',
-							desc = 'Find File                                 ',
+							icon = "  ",
+							icon_hl = "Title",
+							desc = "Find File                                 ",
 							-- desc_hl = 'Title',
-							key = 'f',
+							key = "f",
 							-- keymap = 'SPC f f',
-							key_hl = 'Number',
+							key_hl = "Number",
 							-- key_format = ' %s', -- remove default surrounding `[]`
-							action = "lua require('telescope.builtin').find_files()"
+							action = "lua require('telescope.builtin').find_files()",
 						},
 						{
-							icon = '  ',
-							icon_hl = 'Title',
-							desc = 'Live Grep',
-							key = 'g',
+							icon = "  ",
+							icon_hl = "Title",
+							desc = "Live Grep",
+							key = "g",
 							-- keymap = 'SPC f g',
 							-- key_format = ' %s', -- remove default surrounding `[]`
-							action = "lua require('telescope.builtin').live_grep()"
+							action = "lua require('telescope.builtin').live_grep()",
 						},
 						{
-							icon = '  ',
-							icon_hl = 'Title',
-							desc = 'Explore Buffers',
-							key = 'b',
+							icon = "  ",
+							icon_hl = "Title",
+							desc = "Explore Buffers",
+							key = "b",
 							-- keymap = ''
-							action = "lua require('telescope.builtin').buffers()"
+							action = "lua require('telescope.builtin').buffers()",
 						},
 						{
-							icon = '󰋖  ',
-							icon_hl = 'Title',
-							desc = 'Help Tags',
-							key = 'h',
+							icon = "󰋖  ",
+							icon_hl = "Title",
+							desc = "Help Tags",
+							key = "h",
 							-- keymap = ''
-							action = "lua require('telescope.builtin').help_tags()"
+							action = "lua require('telescope.builtin').help_tags()",
 						},
 						{
-							icon = '  ',
-							icon_hl = 'Title',
-							desc = 'Lazy Home',
-							key = 'l',
-							action = 'lua require("lazy").home()'
-						}, 
-						{
-							icon = '  ',
-							icon_hl = 'Title',
-							desc = 'Sync Plugins',
-							key = 's',
-							action = 'lua require("lazy").sync()'
+							icon = "  ",
+							icon_hl = "Title",
+							desc = "Lazy Home",
+							key = "l",
+							action = 'lua require("lazy").home()',
 						},
 						{
-							icon = '  ',
-							icon_hl = 'Title',
-							desc = 'File Tree',
-							key = 'e',
-							action = 'lua vim.cmd(":NvimTreeToggle")'
+							icon = "  ",
+							icon_hl = "Title",
+							desc = "Sync Plugins",
+							key = "s",
+							action = 'lua require("lazy").sync()',
 						},
 						{
-							icon = '  ',
-							icon_hl = 'Title',
-							desc = 'Themes',
-							key = 't',
-							action = 'lua vim.cmd(":Themery")'
+							icon = "  ",
+							icon_hl = "Title",
+							desc = "File Tree",
+							key = "e",
+							action = 'lua vim.cmd(":NvimTreeToggle")',
 						},
 						{
-							icon = '󰈆  ',
-							icon_hl = 'Title',
-							desc = 'Quit',
-							key = 'q',
-							action = 'lua vim.cmd(":q")'
+							icon = "  ",
+							icon_hl = "Title",
+							desc = "Themes",
+							key = "t",
+							action = 'lua vim.cmd(":Themery")',
+						},
+						{
+							icon = "󰈆  ",
+							icon_hl = "Title",
+							desc = "Quit",
+							key = "q",
+							action = 'lua vim.cmd(":q")',
 						},
 					},
 					footer = {
-						"⚡Made with 💖 by Bobby Smiles 🙂"
+						"⚡Made with 💖 by Bobby Smiles 🙂",
 					},
 				},
-			}
+			})
 		end,
-		dependencies = { {'nvim-tree/nvim-web-devicons'}}
+		dependencies = { { "nvim-tree/nvim-web-devicons" } },
 	},
 	-- Toggle Terminal
-	{'akinsho/toggleterm.nvim', version = "*", config=true},
+	{ "akinsho/toggleterm.nvim", version = "*", config = true },
 	{
-    "lukas-reineke/indent-blankline.nvim",
-    main = "ibl",
-    ---@module "ibl"
-    ---@type ibl.config
-    opts = {},
-		ft = {"python", "c", "c++", "html", "css", "javascript", "lua", "java", "javascriptreact"},
+		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
+		---@module "ibl"
+		---@type ibl.config
+		opts = {},
+		ft = { "python", "c", "c++", "html", "css", "javascript", "lua", "java", "javascriptreact" },
 	},
 	-- Toggle comments easily with comment.nvim
-	{'numToStr/Comment.nvim', opts={}},
-	{'maxmellon/vim-jsx-pretty', ft="javascriptreact"},
+	{ "numToStr/Comment.nvim", opts = {} },
+	{ "maxmellon/vim-jsx-pretty", ft = "javascriptreact" },
 	{
-  "folke/noice.nvim",
-  event = "VeryLazy",
-  opts = {
-    -- add any options here
-  },
-  dependencies = {
-    -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-    "MunifTanjim/nui.nvim",
-    -- OPTIONAL:
-    --   `nvim-notify` is only needed, if you want to use the notification view.
-    --   If not available, we use `mini` as the fallback
-    "rcarriga/nvim-notify",
-    }
+		"folke/noice.nvim",
+		event = "VeryLazy",
+		opts = {
+			-- add any options here
+		},
+		dependencies = {
+			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+			"MunifTanjim/nui.nvim",
+			-- OPTIONAL:
+			--   `nvim-notify` is only needed, if you want to use the notification view.
+			--   If not available, we use `mini` as the fallback
+			"rcarriga/nvim-notify",
+		},
 	},
 	{
-  "smjonas/inc-rename.nvim",
-  config = function()
-    require("inc_rename").setup()
-  end,
+		"smjonas/inc-rename.nvim",
+		config = function()
+			require("inc_rename").setup()
+		end,
 	},
 	{
-    'MeanderingProgrammer/render-markdown.nvim',
-    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
-    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
-    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
-    ---@module 'render-markdown'
-    ---@type render.md.UserConfig
-    opts = {},
-		ft = {"markdown"}
-	}
+		"MeanderingProgrammer/render-markdown.nvim",
+		-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
+		-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" }, -- if you prefer nvim-web-devicons
+		---@module 'render-markdown'
+		---@type render.md.UserConfig
+		opts = {},
+		ft = { "markdown" },
+	},
+	{
+		"Bekaboo/dropbar.nvim",
+		-- optional, but required for fuzzy finder support
+		dependencies = {
+			"nvim-telescope/telescope-fzf-native.nvim",
+			build = "make",
+		},
+		config = function()
+			local dropbar_api = require("dropbar.api")
+			vim.keymap.set("n", "<leader>;", dropbar_api.pick, { desc = "Pick symbols in winbar" })
+			vim.keymap.set("n", "[;", dropbar_api.goto_context_start, { desc = "Go to start of current context" })
+			vim.keymap.set("n", "];", dropbar_api.select_next_context, { desc = "Select next context" })
+		end,
+	},
 }
 require("lazy").setup(plugins, opts)
