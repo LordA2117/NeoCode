@@ -29,6 +29,8 @@ local plugins = {
 	{'nvim-treesitter/nvim-treesitter', build=":TSUpdate"},
 	{'nvim-tree/nvim-tree.lua', dependencies={'nvim-tree/nvim-web-devicons'}},
 	{'akinsho/bufferline.nvim', version = "*", dependencies = {'nvim-tree/nvim-web-devicons'}},
+	-- Formatters
+	{'stevearc/conform.nvim', opts={}},
 	-- Telescope and plenary.nvim
 	{ 'nvim-telescope/telescope.nvim', tag = '0.1.8', dependencies = { 'nvim-lua/plenary.nvim' }},
 	-- colorschemes
