@@ -9,5 +9,13 @@ Neovim Configuration that aims to be easy to install on any machine
 5. leader cl : Comment a line
 6. gc : Comment a block of lines in visual mode
 
+## Screenshots
+
+![Sorry Forgot](./images/ss1.png)
+![Sorry Forgot](./images/ss2.png)
+![Sorry Forgot](./images/ss3.png)
+
+
+
 TODO: 
-- [ ] Prettify the dashboard, it's ass right now, maybe replace the plugin with something else???
+- [x] Prettify the dashboard, it's ass right now, maybe replace the plugin with something else???
