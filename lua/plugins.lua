@@ -24,21 +24,21 @@ local plugins = {
 	{ "L3MON4D3/LuaSnip" },
 	{ "saadparwaiz1/cmp_luasnip" },
 	{ "onsails/lspkind.nvim" },
-	{ "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
-	{ "windwp/nvim-autopairs", event = "InsertEnter", config = true },
-	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-	{ "nvim-tree/nvim-tree.lua", dependencies = { "nvim-tree/nvim-web-devicons" } },
-	{ "akinsho/bufferline.nvim", version = "*", dependencies = { "nvim-tree/nvim-web-devicons" } },
+	{ "nvim-lualine/lualine.nvim",        dependencies = { "nvim-tree/nvim-web-devicons" } },
+	{ "windwp/nvim-autopairs",            event = "InsertEnter",                           config = true },
+	{ "nvim-treesitter/nvim-treesitter",  build = ":TSUpdate" },
+	{ "nvim-tree/nvim-tree.lua",          dependencies = { "nvim-tree/nvim-web-devicons" } },
+	{ "akinsho/bufferline.nvim",          version = "*",                                   dependencies = { "nvim-tree/nvim-web-devicons" } },
 	-- Formatters
-	{ "stevearc/conform.nvim", opts = {} },
+	{ "stevearc/conform.nvim",            opts = {} },
 	-- Telescope and plenary.nvim
-	{ "nvim-telescope/telescope.nvim", tag = "0.1.8", dependencies = { "nvim-lua/plenary.nvim" } },
+	{ "nvim-telescope/telescope.nvim",    tag = "0.1.8",                                   dependencies = { "nvim-lua/plenary.nvim" } },
 	-- colorschemes
-	{ "AstroNvim/astrotheme", name = "astrotheme" },
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	{ "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ..., name = "gruvbox" },
-	{ "olimorris/onedarkpro.nvim", priority = 1000 },
-	{ "loctvl842/monokai-pro.nvim", name = "monokai" },
+	{ "AstroNvim/astrotheme",             name = "astrotheme" },
+	{ "catppuccin/nvim",                  name = "catppuccin",                             priority = 1000 },
+	{ "ellisonleao/gruvbox.nvim",         priority = 1000,                                 config = true,                                   opts = ..., name = "gruvbox" },
+	{ "olimorris/onedarkpro.nvim",        priority = 1000 },
+	{ "loctvl842/monokai-pro.nvim",       name = "monokai" },
 	-- colorscheme switcher
 	{ "zaldih/themery.nvim" },
 	-- Dashboard
@@ -140,7 +140,7 @@ local plugins = {
 		dependencies = { { "nvim-tree/nvim-web-devicons" } },
 	},
 	-- Toggle Terminal
-	{ "akinsho/toggleterm.nvim", version = "*", config = true },
+	{ "akinsho/toggleterm.nvim",  version = "*",         config = true },
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
@@ -150,7 +150,7 @@ local plugins = {
 		ft = { "python", "c", "c++", "html", "css", "javascript", "lua", "java", "javascriptreact" },
 	},
 	-- Toggle comments easily with comment.nvim
-	{ "numToStr/Comment.nvim", opts = {} },
+	{ "numToStr/Comment.nvim",    opts = {} },
 	{ "maxmellon/vim-jsx-pretty", ft = "javascriptreact" },
 	{
 		"folke/noice.nvim",
@@ -166,6 +166,7 @@ local plugins = {
 			--   If not available, we use `mini` as the fallback
 			"rcarriga/nvim-notify",
 		},
+		{ 'projekt0n/github-nvim-theme', name = 'github-theme' },
 	},
 	-- {
 	-- 	"MeanderingProgrammer/render-markdown.nvim",

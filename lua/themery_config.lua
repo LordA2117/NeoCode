@@ -1,7 +1,7 @@
 -- Minimal config
 require("themery").setup({
-  -- themeConfigFile = "C:/Users/abhin/AppData/Local/nvim/lua/theme.lua", -- Described below
-  livePreview = true, -- Apply theme while browsing. Default to true.
+	-- themeConfigFile = "C:/Users/abhin/AppData/Local/nvim/lua/theme.lua", -- Described below
+	livePreview = true, -- Apply theme while browsing. Default to true.
 	themes = {
 		{
 			name = "Gruvbox Dark",
@@ -40,9 +40,17 @@ require("themery").setup({
 		},
 
 		{
-			name="One Dark Pro",
+			name = "One Dark Pro",
 			colorscheme = "onedark",
 		},
+
+		{
+			name = "Github Theme Colorblind",
+			colorscheme = "github_dark_colorblind",
+			before = [[
+			require("github-theme").setup()
+			]]
+		}
 
 	}
 })
