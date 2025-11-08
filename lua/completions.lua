@@ -109,18 +109,26 @@ cmp.setup.cmdline(":", {
 -- Set up lspconfig.
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require("lspconfig")["lua_ls"].setup({
-	capabilities = capabilities,
-})
+-- require("lspconfig")["lua_ls"].setup({
+-- 	capabilities = capabilities,
+-- })
 
-require("lspconfig")["pyright"].setup({
-	capabilities = capabilities,
+vim.lsp.config("ts_ls", {
+	capabilities = capabilities
 })
+vim.lsp.enable({ "ts_ls" })
 
-require("lspconfig")["ts_ls"].setup({
-	capabilities = capabilities,
+vim.lsp.config("lua_ls", {
+	capabilities = capabilities
 })
+vim.lsp.enable({ "lua_ls" })
 
-require("lspconfig")["emmet_language_server"].setup({
-	capabilities = capabilities,
+vim.lsp.config("pyright", {
+	capabilities = capabilities
 })
+vim.lsp.enable({ "pyright" })
+
+vim.lsp.config("emmet_language_server", {
+	capabilities = capabilities
+})
+vim.lsp.enable({ "emmet_language_server" })
