@@ -15,10 +15,14 @@ vim.keymap.set("n", "<leader>tm", ":ToggleTerm<cr>", opts)
 vim.keymap.set("v", "<leader>cc", '"+y', opts)
 
 -- Inc-rename keybinds
-vim.keymap.set("n", "<leader>rn", ":IncRename ")
+vim.keymap.set("n", "<leader>rn", ":IncRename ", opts)
 
 -- Render Markdown
-vim.keymap.set("n", "<leader>mv", ":RenderMarkdown toggle <cr>")
+vim.keymap.set("n", "<leader>mv", ":RenderMarkdown toggle <cr>", opts)
 
 -- Quality of life updates
-vim.keymap.set("n", "<leader>/", ":noh<cr>")
+vim.keymap.set("n", "<leader>/", ":noh<cr>", opts)
+
+-- Triforce plugins
+vim.keymap.set("n", "<leader>tp", ":lua require(\"triforce\").show_profile()<cr>")
+vim.keymap.set("n", "<leader>ts", ':lua require("triforce").get_stats()<cr>')

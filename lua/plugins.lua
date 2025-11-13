@@ -140,7 +140,7 @@ local plugins = {
 		dependencies = { { "nvim-tree/nvim-web-devicons" } },
 	},
 	-- Toggle Terminal
-	{ "akinsho/toggleterm.nvim",  version = "*",         config = true },
+	{ "akinsho/toggleterm.nvim",  version = "*",         config = true, event = "VeryLazy" },
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
@@ -168,33 +168,5 @@ local plugins = {
 		},
 		{ 'projekt0n/github-nvim-theme', name = 'github-theme' },
 	},
-	-- {
-	-- 	"MeanderingProgrammer/render-markdown.nvim",
-	-- 	-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
-	-- 	dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" }, -- if you use standalone mini plugins
-	-- 	-- dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" }, -- if you prefer nvim-web-devicons
-	-- 	---@module 'render-markdown'
-	-- 	---@type render.md.UserConfig
-	-- 	opts = {},
-	-- 	ft = { "markdown" },
-	-- },
-	-- {
-	-- 	"Bekaboo/dropbar.nvim",
-	-- 	ft = { "python", "javascript", "lua" },
-	-- 	-- optional, but required for fuzzy finder support
-	-- 	dependencies = {
-	-- 		"nvim-telescope/telescope-fzf-native.nvim",
-	-- 		build = "make",
-	-- 	},
-	-- 	config = function()
-	-- 		local dropbar_api = require("dropbar.api")
-	-- 		vim.keymap.set("n", "<leader>;", dropbar_api.pick, { desc = "Pick symbols in winbar" })
-	-- 		vim.keymap.set("n", "[;", dropbar_api.goto_context_start, { desc = "Go to start of current context" })
-	-- 		vim.keymap.set("n", "];", dropbar_api.select_next_context, { desc = "Select next context" })
-	-- 	end,
-	-- },
 }
 require("lazy").setup(plugins, opts)
-
--- Possible breaking changes:
--- 1. Added mini.icons to all icon dependencies instead of nvim-web-devicons
