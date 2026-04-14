@@ -132,3 +132,8 @@ vim.lsp.config("emmet_language_server", {
 	capabilities = capabilities
 })
 vim.lsp.enable({ "emmet_language_server" })
+
+vim.lsp.config("gopls", {
+	capabilities = capabilities
+})
+vim.lsp.enable({ "gopls" })

@@ -147,7 +147,7 @@ local plugins = {
 		---@module "ibl"
 		---@type ibl.config
 		opts = {},
-		ft = { "python", "c", "c++", "html", "css", "javascript", "lua", "java", "javascriptreact" },
+		ft = { "python", "c", "c++", "html", "css", "javascript", "lua", "java", "javascriptreact", "go" },
 	},
 	-- Toggle comments easily with comment.nvim
 	{ "numToStr/Comment.nvim",    opts = {} },
