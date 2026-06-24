@@ -168,5 +168,12 @@ local plugins = {
 		},
 		{ 'projekt0n/github-nvim-theme', name = 'github-theme' },
 	},
+	-- View status updates
+	{
+		"j-hui/fidget.nvim",
+		opts = {
+			-- options
+		},
+	},
 }
 require("lazy").setup(plugins, opts)
